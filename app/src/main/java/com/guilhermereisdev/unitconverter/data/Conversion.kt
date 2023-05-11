@@ -1,4 +1,4 @@
-package com.guilhermereisdev.unitconverter
+package com.guilhermereisdev.unitconverter.data
 
 data class Conversion(
     val id: Int,

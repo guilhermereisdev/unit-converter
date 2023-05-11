@@ -1,4 +1,4 @@
-package com.guilhermereisdev.unitconverter
+package com.guilhermereisdev.unitconverter.compose
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -26,6 +26,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.toSize
+import com.guilhermereisdev.unitconverter.data.Conversion
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

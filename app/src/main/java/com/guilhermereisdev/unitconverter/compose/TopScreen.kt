@@ -1,10 +1,10 @@
-package com.guilhermereisdev.unitconverter
+package com.guilhermereisdev.unitconverter.compose
 
-import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import com.guilhermereisdev.unitconverter.data.Conversion
 import java.math.RoundingMode
 import java.text.DecimalFormat
 
