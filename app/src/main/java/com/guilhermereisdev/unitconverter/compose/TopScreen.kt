@@ -9,13 +9,17 @@ import java.math.RoundingMode
 import java.text.DecimalFormat
 
 @Composable
-fun TopScreen(list: List<Conversion>) {
+fun TopScreen(
+    list: List<Conversion>,
+    save: (String, String) -> Unit
+) {
     val selectedConversion: MutableState<Conversion?> = remember { mutableStateOf(null) }
     val inputText: MutableState<String> = remember { mutableStateOf("") }
     val typedValue: MutableState<String> = remember { mutableStateOf("0.0") }
 
     ConversionMenu(list = list) {
         selectedConversion.value = it
+        typedValue.value = "0.0"
     }
 
     selectedConversion.value?.let {
@@ -30,8 +34,9 @@ fun TopScreen(list: List<Conversion>) {
             val df = DecimalFormat("#.##")
             df.roundingMode = RoundingMode.HALF_UP
             val roundedResult = df.format(input * it.multiplyBy)
-            val message1 = "${typedValue.value} ${it.convertFrom} is equal to"
+            val message1 = "${typedValue.value} ${it.convertFrom} is equal to "
             val message2 = "$roundedResult ${it.convertTo}"
+            save(message1, message2)
             ResultBlock(message1 = message1, message2 = message2)
         }
     }
