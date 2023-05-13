@@ -1,4 +1,4 @@
-package com.guilhermereisdev.unitconverter.compose
+package com.guilhermereisdev.unitconverter.compose.converter
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
